@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# String Calculator Project Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Overview
+The String Calculator is a simple React application that takes a string of numbers separated by various delimiters (commas, newlines, semicolons, or custom delimiters) and calculates their sum. The application provides error handling for invalid inputs, such as negative numbers.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+1. Input string with numbers separated by default or custom delimiters.
+2. Calculates the sum of the provided numbers.
+3. Displays an error modal for invalid inputs.
+4. Responsive and user-friendly interface.
+   
+## Technologies Used
+1. React: For building the user interface.
+2. JavaScript: For application logic.
+3. CSS: For styling the components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Open the application in your web browser.
+    In the input field, enter a string of numbers. You can use default delimiters (, \n ;) or specify a custom delimiter at the start of the string, for example:
+        Default: 1,2\n3
+        Custom: //;\n1;2;3
+    Click the Calculate Sum button.
+    The application will display the sum of the numbers. If there are negative numbers in the input, an error message will be shown.
 
-### `npm test`
+Components
+1. Calculator
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is the main component of the application that handles user input and displays the result.
+Props
 
-### `npm run build`
+    None
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+State
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    inputString: The string of numbers entered by the user.
+    result: The calculated sum of the numbers.
+    error: Error message if the input is invalid.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Methods
 
-### `npm run eject`
+    handleInputChange(e): Updates the inputString state and resets the error and result.
+    calculateSum(): Calculates the sum of the numbers by calling the add function and handles any errors.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. ErrorModal
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A modal component that displays error messages to the user.
+Props
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    message: The error message to display.
+    onClose: A function to call when the modal is closed.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Utility Function: add
 
-## Learn More
+This utility function takes a string of numbers and calculates their sum.
+Parameters
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    numbers (string): The input string containing numbers separated by delimiters.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Returns
 
-### Code Splitting
+    number: The total sum of the numbers.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Utility Function: splitByDelimiters
 
-### Analyzing the Bundle Size
+This helper function splits a string into an array of substrings based on multiple delimiters.
+Parameters
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    string (string): The input string to split.
+    delimiters (array): An array of delimiters to use for splitting.
 
-### Making a Progressive Web App
+Returns
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    array: An array of substrings split by the specified delimiters.
 
-### Advanced Configuration
+Error Handling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    If the input contains negative numbers, an error will be thrown, and the ErrorModal will display a message listing the negative numbers.
+    If the input string is empty or improperly formatted, the application will handle the error gracefully.
 
-### Deployment
+Styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The application uses a simple CSS file (Calculator.css) for styling. Modify this file to change the appearance of the calculator and its components.
+Contributing
 
-### `npm run build` fails to minify
+Contributions are welcome! If you have suggestions for improvements or new features, please feel free to open an issue or submit a pull request.
+License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
+
