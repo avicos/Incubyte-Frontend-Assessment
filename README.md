@@ -25,7 +25,7 @@ The String Calculator is a simple React application that takes a string of numbe
 3. Click the Calculate Sum button.
 4. The application will display the sum of the numbers. If there are negative numbers in the input, an error message will be shown.
 
-##Components
+## Components
 1. Calculator
 
 This is the main component of the application that handles user input and displays the result.
@@ -75,18 +75,20 @@ Returns
 
     array: An array of substrings split by the specified delimiters.
 
-Error Handling
+## Error Handling
 
     If the input contains negative numbers, an error will be thrown, and the ErrorModal will display a message listing the negative numbers.
     If the input string is empty or improperly formatted, the application will handle the error gracefully.
 
-Styling
+## Styling
 
 The application uses a simple CSS file (Calculator.css) for styling. Modify this file to change the appearance of the calculator and its components.
 Contributing
 
+## Contributing
+
 Contributions are welcome! If you have suggestions for improvements or new features, please feel free to open an issue or submit a pull request.
-License
+
+## License
 
 This project is licensed under the MIT License.
-
