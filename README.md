@@ -16,16 +16,16 @@ The String Calculator is a simple React application that takes a string of numbe
 2. JavaScript: For application logic.
 3. CSS: For styling the components.
 
-Usage
+## Usage
 
-    Open the application in your web browser.
-    In the input field, enter a string of numbers. You can use default delimiters (, \n ;) or specify a custom delimiter at the start of the string, for example:
+1. Open the application in your web browser.
+2. In the input field, enter a string of numbers. You can use default delimiters (, \n ;) or specify a custom delimiter at the start of the string, for example:
         Default: 1,2\n3
         Custom: //;\n1;2;3
-    Click the Calculate Sum button.
-    The application will display the sum of the numbers. If there are negative numbers in the input, an error message will be shown.
+3. Click the Calculate Sum button.
+4. The application will display the sum of the numbers. If there are negative numbers in the input, an error message will be shown.
 
-Components
+##Components
 1. Calculator
 
 This is the main component of the application that handles user input and displays the result.
